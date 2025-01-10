@@ -12,3 +12,4 @@ export const getGreeting = async () => {
     });
     return getGreeting ? getGreeting.text : 'No greeting found!';
   }
+  

@@ -1,5 +1,6 @@
 import { getGreeting } from "./Query/getGreeting.js";
 import { createGreeting } from "./Mutation/createGreeting.js";
+import { getAllGreeting } from "./Query/getAllGreetings.js";
 
 export const demoResolver = {
   // Query: {
@@ -13,5 +14,7 @@ export const demoResolver = {
   Query: {
     getGreeting: async (parent, _args, context) =>
       getGreeting(parent, _args, context),
+    getAllGreeting: async (parent, _args, context) =>
+      getAllGreeting(parent, _args, context),
   },
 };

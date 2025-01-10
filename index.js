@@ -37,6 +37,10 @@ const resolverObject={
       });
       return greeting? greeting.text : 'No greeting found!';
     },
+    getAllGreeting: async () =>{
+      const allGreeting = await prisma.greeting.findMany();
+      return allGreeting.map((greeting) => greeting.text);
+    }
   },
   Mutation: {
     createGreeting: async (_, { text }) => {
